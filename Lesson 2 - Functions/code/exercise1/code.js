@@ -10,8 +10,16 @@
         
         // !!! add all arguments to sum
         
+        for(var i=0; i<arguments.length;i++){
+            sum=arguments[i]+sum;
+        }
+        
         // !!! return function for use sum value as a base for next arythmetic operation but without change value of sum variable
         return function() {
+            for(var i=0; i<arguments.length;i++){
+                sum=arguments[i]+sum;
+            }
+            return sum;
         };
 	};
 
@@ -33,3 +41,4 @@ var addOther = UAM.addManyValues(0, 10, 10);
 addOther(10); // 30
 
 */
+

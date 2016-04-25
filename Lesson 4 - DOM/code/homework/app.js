@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function () {
 
     //Create area and ship as `div` in `document` node
-    var playArea = {}, // ??
-        ship = {}; // ??
+    var playArea = document.createElement('div') ;// ??
+    var ship = document.createElement('div'); // ??
 
     var key = {
         right: false,
@@ -21,12 +21,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // Add player area and ship element at the end of `document.body` element
 
+    document.body.appendChild(playArea);
+    document.body.appendChild(ship);
     // ??
     // ??
 
     // Add CSS classes accordingly ( player -> player, playArea -> playArea)
 
-    // ??
+    ship.classList.add('ship');
+    playArea.classList.add('playArea');
+        // ??
     // ??
 
     //move mechanics
@@ -98,7 +102,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // add event listeners observers for both `keydown` and `keyup` events
     // using 'keydown' and 'keyup' functions provided above
-
+    document.addEvenListener("keyup",keyUp,false);
+    document.addEvenListener("keydown",keyDown,false);
     // ??
     // ??
 

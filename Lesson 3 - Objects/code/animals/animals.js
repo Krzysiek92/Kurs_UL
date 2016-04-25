@@ -1,10 +1,25 @@
 (function (global) {
 	var Cat = null, Bird = null, Worm = null;
-
+    
+   
+    var Cat = {
+     eat: function (zwierze){
+        if (((zwierze.type === "Worm") && (this.type === "Bird")) || ((zwierze.type === "Bird") && (this.type === "Cat")))
+    return "Mniam!";
+    else return "Blee!";
+    }
+    },Worm, Bird;
 	if (!global.UAM) {
 		global.UAM = {};
 	}
-
+    //obiekty
+     Bird = Object.create(Cat);
+    //Worm = Object.create(Worm);
+    Worm = Object.create(Bird);
+    //typy
+    Bird.type="Bird";
+    Worm.type="Worm";
+    Cat.type="Cat";
 	global.UAM.Cat = Cat;
 	global.UAM.Bird = Bird;
 	global.UAM.Worm = Worm;
@@ -28,5 +43,7 @@
 
 	Dodatkowo wszystkie obiekty mają korzystać ze wspólnej metody eat.
 */
+
+
 
 

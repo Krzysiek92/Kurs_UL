@@ -5,14 +5,14 @@
 		global.UAM = {};
 	}
 
-	mapArray = function (array, callback, ctx) {
+mapArray = function (array, callback, ctx) {
         var newArr = [];
         
-        // add code for maping
-        
-        return newArr;
-	};
-
+        array.forEach( function(element, index) {
+        	newArr.push( callback(element, index, array) );
+		});
+		return newArr;
+    }
 	global.UAM.mapArray = mapArray;
 
 }(window));
