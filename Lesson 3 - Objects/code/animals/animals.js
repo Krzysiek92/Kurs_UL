@@ -1,6 +1,6 @@
 (function (global) {
 	var Cat = null, Bird = null, Worm = null;
-    
+    int a;
    
     var Cat = {
      eat: function (zwierze){
